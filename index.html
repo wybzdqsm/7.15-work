@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="banner">
+    <div class="content">
+        <div class="content1">
+           <a href="javascript:;" class="img" style="background: url(img/b1.png)center center no-repeat" ></a>
+           <a href="javascript:;" class="img" style="background: url(img/b2.png) center center no-repeat" ></a>
+           <a href="javascript:;" class="img" style="background: url(img/b3.png) center center no-repeat"></a>
+           <a href="javascript:;" class="img" style="background: url(img/b4.png) center center no-repeat"></a>
+           <a href="javascript:;" class="img" style="background: url(img/b5.png) center center no-repeat"></a>
+           <a href="javascript:;" class="img" style="background: url(img/b6.png) center center no-repeat"></a>
+
+        </div>
+        <div class="huantu">
+            <span class="huantu1" style="background-color: blue;"></span>
+            <span class="huantu1"></span>
+            <span class="huantu1"></span>
+            <span class="huantu1"></span>
+            <span class="huantu1"></span>
+            <span class="huantu1"></span>
+        </div>
+     
+    </div>
+</div>
+
+
+<script>
+      var span=document.querySelectorAll(".huantu1")
+     var  content=document.querySelectorAll(".img")    
+   var num=0;
+   setInterval(function(){
+  num++;
+  if(num>span.length-1){
+      num=0
+  }
+  for(var j=0;j<content.length;j++){
+             
+             content[j].style.display="none";
+             span[j].style.background="rgba("+255+","+255+","+255+","+1+")";
+            
+               }
+              content[num].style.display="block";
+              span[num].style.background="blue";
+
+   },3000)
+      
+   for(let i=0;i<span.length;i++){
+   
+           span[i].onclick=function(){
+            num=i;
+               for(var j=0;j<content.length;j++){
+             content[j].style.display="none";
+             span[j].style.background="rgba("+255+","+255+","+255+","+1+")";
+            
+               }
+              content[i].style.display="block";
+              this.style.background="blue";
+            
+            }
+
+           }      
+
+
+          
+
+          
+</script>
+</body>
+</html>
